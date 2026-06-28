@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>도구 모음 - Lena's Tools</title>
-<meta name="description" content="설치·로그인 없이 브라우저에서 바로 쓰는 무료 웹 도구 모음. 글자 수 세기 등.">
+<meta name="description" content="설치·로그인 없이 브라우저에서 바로 쓰는 무료 웹 도구 모음. 글자 수 세기, 배경 제거 등.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#3D6B5E">
 <link rel="canonical" href="https://hanariago.github.io/tools-hub/">
@@ -73,8 +73,6 @@
   .tool-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
   .tool-go { margin-top: 14px; font-size: 12px; font-weight: 600; color: var(--accent); }
 
-  .empty { color: var(--text-muted); font-size: 14px; text-align: center; padding: 40px; }
-
   footer { margin-top: 44px; font-size: 12px; color: var(--text-muted); text-align: center; letter-spacing: 0.03em; line-height: 1.8; }
   footer a { color: var(--text-secondary); text-decoration: none; border-bottom: 1px solid var(--border); }
   footer a:hover { color: var(--accent); }
@@ -87,39 +85,36 @@
   <div class="subtitle">설치·로그인 없이 브라우저에서 바로 쓰는 무료 웹 도구</div>
 </header>
 
-<main class="grid" id="grid">
-  <div class="empty">불러오는 중…</div>
+<!--
+  ▼ 새 도구 추가 시: 아래 형식으로 카드 <a> 하나를 grid 안에 복사해 넣고 커밋.
+  <a class="tool-card" href="도구URL">
+    <div class="tool-emoji">이모지</div>
+    <div class="tool-name">한글이름<span class="en">English</span></div>
+    <div class="tool-desc">한 줄 설명</div>
+    <div class="tool-go">바로 쓰기 →</div>
+  </a>
+-->
+<main class="grid">
+
+  <a class="tool-card" href="https://hanariago.github.io/tool-char-counter/">
+    <div class="tool-emoji">🔢</div>
+    <div class="tool-name">글자 수 세기<span class="en">Character Counter</span></div>
+    <div class="tool-desc">공백 포함/제외, 단어·문장·줄·바이트 수까지 실시간 계산. 다국어 지원.</div>
+    <div class="tool-go">바로 쓰기 →</div>
+  </a>
+
+  <a class="tool-card" href="https://hanariago.github.io/tool-bg-remover/">
+    <div class="tool-emoji">🖼️</div>
+    <div class="tool-name">배경 제거<span class="en">Background Remover</span></div>
+    <div class="tool-desc">브라우저에서 바로 이미지 배경 제거. 서버 전송 없이 무제한 무료 (AI 자동 + 단색 모드).</div>
+    <div class="tool-go">바로 쓰기 →</div>
+  </a>
+
 </main>
 
 <footer>
-  <div>Made by <a href="https://x.com/thezenvoid" target="_blank" rel="noopener">Lena</a> · 오픈소스 (MIT)</div>
+  <div>Made by <a href="https://x.com/thezenvoid" target="_blank" rel="noopener">Lena</a> · 오픈소스</div>
 </footer>
-
-<script>
-  function card(t) {
-    var en = t.name_en ? '<span class="en">' + t.name_en + '</span>' : '';
-    return '<a class="tool-card" href="' + t.url + '">' +
-      '<div class="tool-emoji">' + (t.emoji || '🔧') + '</div>' +
-      '<div class="tool-name">' + t.name + en + '</div>' +
-      '<div class="tool-desc">' + (t.desc || '') + '</div>' +
-      '<div class="tool-go">바로 쓰기 →</div>' +
-      '</a>';
-  }
-
-  fetch('./tools.json', { cache: 'no-cache' })
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      var live = (data.tools || []).filter(function (t) { return t.status === 'live'; });
-      var grid = document.getElementById('grid');
-      grid.innerHTML = live.length
-        ? live.map(card).join('')
-        : '<div class="empty">아직 공개된 도구가 없습니다.</div>';
-    })
-    .catch(function () {
-      document.getElementById('grid').innerHTML =
-        '<div class="empty">목록을 불러오지 못했습니다.</div>';
-    });
-</script>
 
 </body>
 </html>
