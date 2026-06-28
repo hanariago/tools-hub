@@ -41,6 +41,18 @@
       "emoji": "🎨",
       "tags": ["image", "픽셀아트", "pixel-art", "sprite-editor", "도트"],
       "status": "live"
+    },
+    {
+      "id": "dev-utils",
+      "name": "개발자 유틸 모음",
+      "name_en": "Dev Utils",
+      "url": "https://hanariago.github.io/tool-dev-utils/",
+      "repo": "https://github.com/hanariago/tool-dev-utils",
+      "desc": "Base64·URL 인코딩, HEX↔RGB↔HSL 색상 변환, Unix 타임스탬프 변환을 한 곳에서. 서버 전송 없이 브라우저에서.",
+      "desc_en": "Base64/URL encoding, HEX↔RGB↔HSL color conversion, and Unix timestamp conversion in one place. Runs fully in your browser, no uploads.",
+      "emoji": "🛠️",
+      "tags": ["developer", "base64", "url-encoder", "color-converter", "timestamp", "개발자도구"],
+      "status": "live"
     }
   ]
 }
