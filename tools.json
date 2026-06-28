@@ -17,6 +17,18 @@
       "emoji": "🔢",
       "tags": ["text", "글자수", "character-counter"],
       "status": "live"
+    },
+    {
+      "id": "bg-remover",
+      "name": "배경 제거",
+      "name_en": "Background Remover",
+      "url": "https://hanariago.github.io/tool-bg-remover/",
+      "repo": "https://github.com/hanariago/tool-bg-remover",
+      "desc": "브라우저에서 바로 이미지 배경 제거. 서버 전송 없이 무제한 무료 (AI 자동 + 단색 모드).",
+      "desc_en": "Remove image backgrounds right in your browser. Free and unlimited with no uploads (AI auto + solid-color modes).",
+      "emoji": "🖼️",
+      "tags": ["image", "배경제거", "background-remover"],
+      "status": "live"
     }
   ]
 }
