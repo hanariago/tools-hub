@@ -2,8 +2,7 @@
 
 Lena의 `tool-*` 공개 웹 도구 모음 **허브 페이지**.
 
-> 현재 **private**. 도구가 어느 정도 쌓이면 public 전환 + GitHub Pages 활성화 예정.
-> (GitHub Pages 무료 플랜은 public repo만 호스팅)
+> ✅ **공개됨** — https://hanariago.github.io/tools-hub/ (GitHub Pages, public)
 
 ## 구조 (정적)
 ```
